@@ -1,12 +1,4 @@
-/* css Zen Garden submission 157 - 'Bugs', by Zohar Arad */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-/* All associated graphics copyright 2005, Zohar Arad */
-/* Added: Mar. 7th, 2005 */
-
-/* IMPORTANT */
-/* This design is not a template. You may not reproduce it elsewhere without the 
-   designer's written permission. However, feel free to study the CSS and use 
-   techniques you learn from it elsewhere. */
+/* css Zen Garden submission 157 - 'Bugs', by Zohar Arad + animated background */
 
 /* General Styles */
 body{
@@ -18,11 +10,25 @@ body{
 	padding:0;
 	text-align:center;
 
+	/* Background image + animated color overlay */
 	background-image: url(/157/giphy.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
+
+	/* Overlay color animation using gradient + keyframes */
+	position: relative;
+	animation: bgColorAnim 20s infinite alternate;
+}
+
+/* Background color animation */
+@keyframes bgColorAnim {
+	0%   { background-color: #FBD1BC; }
+	25%  { background-color: #FCE4D6; }
+	50%  { background-color: #FAD1A5; }
+	75%  { background-color: #FBC2A4; }
+	100% { background-color: #FBD1BC; }
 }
 
 a{font-weight:bold;color: #8B3C12;text-decoration:none}
